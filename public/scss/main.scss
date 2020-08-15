@@ -1,0 +1,27 @@
+@import 'transitions';
+
+@mixin flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+// navbar styles
+#nav {
+    height: 100px;
+    width: 100%;
+    @include flex();
+
+    a {
+        margin: 0 10px 0 10px;
+    }
+}

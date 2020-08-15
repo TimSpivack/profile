@@ -1,0 +1,17 @@
+.transition-top-bottom {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: -100vh;
+    left: 0;
+    background-color: black;
+}
+
+.transition-bottom-top {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 100vh;
+    left: 0;
+    background-color: black;
+}
