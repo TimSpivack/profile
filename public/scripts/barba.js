@@ -12,17 +12,53 @@ barba.init({
             gsap.set('#index-content', {
                 display: 'flex'
             });
+            gsap.set('.profile-card', {
+                opacity: 0
+            });
+        },
+        afterEnter() {
+            gsap.to('.profile-card', {
+                duration: 1,
+                stagger: 0.3,
+                opacity: 1
+            });
         }
     }, {
-        namespace: 'about',
+        namespace: 'gary',
         beforeLeave() {
-            gsap.to('#about-content', {
+            gsap.to('#gary-content', {
                 duration: 1,
                 display: 'none'
             });
         },
         beforeEnter() {
-            gsap.set('#about-content', {
+            gsap.set('#gary-content', {
+                display: 'flex'
+            });
+        }
+    },  {
+        namespace: 'sandi',
+        beforeLeave() {
+            gsap.to('#sandi-content', {
+                duration: 1,
+                display: 'none'
+            });
+        },
+        beforeEnter() {
+            gsap.set('#sandi-content', {
+                display: 'flex'
+            });
+        }
+    },  {
+        namespace: 'tim',
+        beforeLeave() {
+            gsap.to('#tim-content', {
+                duration: 1,
+                display: 'none'
+            });
+        },
+        beforeEnter() {
+            gsap.set('#tim-content', {
                 display: 'flex'
             });
         }
