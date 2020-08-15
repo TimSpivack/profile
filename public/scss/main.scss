@@ -61,4 +61,70 @@ a {
             &:hover { color: $secondary; transition: 0.5s;}
         }
     }
+    .profile-page-container {
+        width: 100%;
+        height: 100%;
+        @include flex(column);
+        .profile-section {
+            @include flex(column);
+            align-items: flex-start;
+            justify-content: flex-start;
+            p {
+                text-align: justify;
+            }
+            .profile-img {
+                display: none;
+            }
+            .links {
+                @include flex(row);
+                width: 100%;
+                a {
+                    margin: 0 10px 0 10px;
+                    font-size: 24px;
+                    color: $secondary;
+                    &:hover {
+                        transition: 0.5s;
+                        color: $primary;
+                    }
+                }
+            }
+        }
+        .divider {
+            height: 1px;
+            width: 100%;
+            background-color: $secondary;
+        }
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .page-content {
+        width: 900px;
+        @include flex(row);
+        .profile-card {
+            .profile-img {
+                width: 200px;
+                height: 200px;
+            }
+        }
+        .profile-page-container {
+            @include flex(row);
+            .profile-section {
+                width: 400px;
+                margin: auto;
+                .profile-img {
+                    display: block;
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                    border-radius: 5px;
+                    margin: auto;
+                    @include bg-image();
+                    height: 300px;
+                    width: 300px;
+                }
+                .links {
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
 }
