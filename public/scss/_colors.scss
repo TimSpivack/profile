@@ -1,0 +1,32 @@
+$primary: #f2612c;
+$secondary: #9b00f5;
+$light: #f2f2f8;
+$dark: #676567;
+
+// background-colors
+.bg-primary {
+    background-color: $primary;
+}
+.bg-secondary {
+    background-color: $secondary;
+}
+.bg-light {
+    background-color: $light;
+}
+.bg-dark {
+    background-color: $dark;
+}
+
+// text-colors
+.text-primary {
+    color: $primary;
+}
+.text-secondary {
+    color: $secondary;
+}
+.text-light {
+    color: $light;
+}
+.text-dark {
+    color: $dark;
+}
