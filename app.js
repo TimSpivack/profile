@@ -19,8 +19,16 @@ app.get('/', (req, res) => {
     res.render('index');
 });
 
-app.get('/about', (req, res) => {
-    res.render('about');
+app.get('/gary', (req, res) => {
+    res.render('gary');
+});
+
+app.get('/sandi', (req, res) => {
+    res.render('sandi');
+});
+
+app.get('/tim', (req, res) => {
+    res.render('tim');
 });
 
 // start server

@@ -35,7 +35,7 @@ barba.init({
             namespace: ['index']
         },
         to: {
-            namespace: ['about']
+            namespace: ['gary', 'sandi', 'tim']
         },
         leave() {
             return gsap.to('.transition-top-bottom', {
@@ -60,7 +60,7 @@ barba.init({
     }, {
         name: 'bottom-top',
         from: {
-            namespace: ['about']
+            namespace: ['gary', 'sandi', 'tim']
         },
         to: {
             namespace: ['index']

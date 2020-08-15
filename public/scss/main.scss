@@ -1,11 +1,22 @@
 @import 'colors';
 @import 'transitions';
 
-@mixin flex {
+@mixin flex($direction) {
     display: flex;
-    flex-direction: row;
+    flex-direction: $direction;
     justify-content: center;
     align-items: center;
+}
+
+@mixin bg-image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bg-pattern {
+    background-size: initial;
+    background-position: center;
 }
 
 html, body {
@@ -21,13 +32,26 @@ a {
     text-decoration: none;
 }
 
-// navbar styles
-#nav {
-    height: 100px;
+// containers
+.main-container {
+    height: 100%;
     width: 100%;
-    @include flex();
+}
 
-    a {
-        margin: 0 10px 0 10px;
+.page-content {
+    height: 100%;
+    width: 900px;
+    margin: auto;
+    @include flex(row);
+    .profile-card {
+        width: 450px;
+        margin: auto;
+        @include flex(column);
+        .profile-img {
+            height: 200px;
+            width: 200px;
+            border-radius: 5px;
+            @include bg-image();
+        }
     }
 }

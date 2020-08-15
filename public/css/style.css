@@ -36,6 +36,10 @@
   top: 100vh;
   left: 0; }
 
+.bg-pattern {
+  background-size: initial;
+  background-position: center; }
+
 html, body {
   margin: 0;
   padding: 0;
@@ -47,12 +51,29 @@ html, body {
 a {
   text-decoration: none; }
 
-#nav {
-  height: 100px;
-  width: 100%;
+.main-container {
+  height: 100%;
+  width: 100%; }
+
+.page-content {
+  height: 100%;
+  width: 900px;
+  margin: auto;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center; }
-  #nav a {
-    margin: 0 10px 0 10px; }
+  .page-content .profile-card {
+    width: 450px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .page-content .profile-card .profile-img {
+      height: 200px;
+      width: 200px;
+      border-radius: 5px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat; }
