@@ -116,6 +116,46 @@ a {
     }
 }
 
+#login-wrapper {
+    height: 100%;
+    width: 100%;
+    @include flex(row);
+    #login-form-wrapper {
+        height: 350px;
+        width: 350px;
+        border-radius: 10px;
+        background-color: $secondary;
+        border: 1px solid $primary;
+        form {
+            @include flex(column);
+            height: 100%;
+            width: 100%;
+            input, button {
+                margin: 10px 0 10px 0;
+            }
+            input {
+                height: 25px;
+                width: 200px;
+                border-radius: 5px;
+                border: 1px solid $primary;
+            }
+            button {
+                height: 25px;
+                width: 100px;
+                background-color: $light;
+                border-radius: 5px;
+                border: 3px solid $primary;
+                color: $dark;
+                &:hover {
+                    background-color: $primary;
+                    color: $light;
+                    transition: 0.5s;
+                }
+            }
+        }
+    }
+}
+
 @media only screen and (min-width: 900px) {
     .page-content {
         width: 900px;
