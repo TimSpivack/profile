@@ -60,37 +60,15 @@ passport.deserializeUser(User.deserializeUser());
 const auth = require('./middleware/auth');
 
 // routes
-app.get('/', (req, res) => {
-    res.render('index');
-});
+const mainRoutes = require('./routes/main'),
+      loginRoutes = require('./routes/login'),
+      profileRoutes = require('./routes/profile');
 
-app.get('/gary', (req, res) => {
-    res.render('gary');
-});
+app.use('/', mainRoutes); // main routes
 
-app.get('/sandi', (req, res) => {
-    res.render('sandi');
-});
+app.use('/login', loginRoutes); // login routes
 
-app.get('/tim', (req, res) => {
-    res.render('tim');
-});
-
-app.get('/login', (req, res) => {
-    res.render('login');
-});
-
-app.post('/login', passport.authenticate('local'), (req, res) => {
-    try {
-        res.send('success');
-    } catch (err) {
-        throw err;
-    }
-});
-
-app.get('/profile', auth.loggedIn, (req, res) => {
-    res.send('profile!');
-});
+app.use('/profile', auth.loggedIn, profileRoutes); // profile routes
 
 // start server
 app.listen(process.env.PORT, () => console.log('Profile server started...') );
