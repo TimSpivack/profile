@@ -1,5 +1,6 @@
 @import 'colors';
 @import 'transitions';
+@import 'buttons';
 
 @mixin flex($direction) {
     display: flex;
@@ -55,6 +56,26 @@ a {
 .main-container {
     height: 100%;
     width: 100%;
+    @include flex(column);
+    #edit-page-photo {
+        @include bg-image();
+        height: 150px;
+        width: 150px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+    }
+    form {
+        @include flex(column);
+        textarea {
+            margin: 10px 0 10px 0;
+            height: 100px;
+            width: 300px;
+        }
+        button {
+            width: auto;
+            margin-top: 20px;
+        }
+    }
 }
 
 .page-content {
@@ -138,19 +159,6 @@ a {
                 width: 200px;
                 border-radius: 5px;
                 border: 1px solid $primary;
-            }
-            button {
-                height: 25px;
-                width: 100px;
-                background-color: $light;
-                border-radius: 5px;
-                border: 3px solid $primary;
-                color: $dark;
-                &:hover {
-                    background-color: $primary;
-                    color: $light;
-                    transition: 0.5s;
-                }
             }
         }
     }

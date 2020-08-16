@@ -3,6 +3,8 @@ const mongoose = require('mongoose'),
       passportLocalMongoose = require('passport-local-mongoose');
 
 const User = new Schema({
+    name: String,
+    photo: String,
     about: String,
     experience: String,
     hobbies: String

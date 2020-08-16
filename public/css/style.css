@@ -36,6 +36,18 @@
   top: 100vh;
   left: 0; }
 
+button {
+  height: 25px;
+  width: 100px;
+  background-color: #f2f2f8;
+  border-radius: 5px;
+  border: 3px solid #f2612c;
+  color: #676567; }
+  button:hover {
+    background-color: #f2612c;
+    color: #f2f2f8;
+    transition: 0.5s; }
+
 .bg-pattern {
   background-size: initial;
   background-position: center; }
@@ -71,7 +83,31 @@ a {
 
 .main-container {
   height: 100%;
-  width: 100%; }
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .main-container #edit-page-photo {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 150px;
+    width: 150px;
+    margin-bottom: 20px;
+    border-radius: 10px; }
+  .main-container form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .main-container form textarea {
+      margin: 10px 0 10px 0;
+      height: 100px;
+      width: 300px; }
+    .main-container form button {
+      width: auto;
+      margin-top: 20px; }
 
 .page-content {
   height: 80%;
@@ -166,17 +202,6 @@ a {
         width: 200px;
         border-radius: 5px;
         border: 1px solid #f2612c; }
-      #login-wrapper #login-form-wrapper form button {
-        height: 25px;
-        width: 100px;
-        background-color: #f2f2f8;
-        border-radius: 5px;
-        border: 3px solid #f2612c;
-        color: #676567; }
-        #login-wrapper #login-form-wrapper form button:hover {
-          background-color: #f2612c;
-          color: #f2f2f8;
-          transition: 0.5s; }
 
 @media only screen and (min-width: 900px) {
   .page-content {

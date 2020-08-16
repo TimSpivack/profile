@@ -1,1 +1,30 @@
-PROFILE
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <title>Profile</title>
+</head>
+    <body>
+        <div class="main-container bg-pattern" style="background-image: url('./images/pattern-white.png');">
+            <div id="edit-page-photo" style="background-image: url('<%=user.photo%>');"></div>
+            <form action="/profile/<%=user._id%>/image" method="POST" enctype="multipart/form-data">
+                <input type="file" name="image">
+                <button type="submit">Update Profile Picture</button>
+            </form>
+            <form id="profile-form" action="/profile?_method=PUT" method="POST">
+                <input type="hidden" name="user" value="<%=user._id%>">
+                <p>About</p>
+                <textarea name="about"><%- user.about %></textarea>
+                <p>Experience</p>
+                <textarea name="experience"><%- user.experience %></textarea>
+                <p>Hobbies</p>
+                <textarea name="hobbies"><%- user.hobbies %></textarea>
+                <button type="submit">Update</button>
+            </form>
+        </div>
+    </body>
+</html>
