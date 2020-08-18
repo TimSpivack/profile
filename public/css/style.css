@@ -134,7 +134,10 @@ a {
       align-items: center;
       align-items: flex-start;
       justify-content: flex-start; }
+      .page-content .profile-page-container .profile-section h1 {
+        color: #9d0208; }
       .page-content .profile-page-container .profile-section p {
+        color: #f2f2f8;
         text-align: justify; }
       .page-content .profile-page-container .profile-section .profile-img {
         display: none; }
