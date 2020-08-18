@@ -15,11 +15,6 @@
     background-repeat: no-repeat;
 }
 
-.bg-pattern {
-    background-size: initial;
-    background-position: center;
-}
-
 html, body {
     margin: 0;
     padding: 0;
@@ -33,30 +28,12 @@ a {
     text-decoration: none;
 }
 
-// nav
-#nav {
-    position: fixed;
-    top: 20px;
-    left: 0;
-    width: 100vw;
-    @include flex(row);
-    font-family: 'Dancing Script', cursive;
-    a {
-        color: $primary;
-        font-size: 48px;
-        &:hover {
-            transition: 0.2s;
-            color: $secondary;
-            text-decoration: underline;
-        }
-    }
-}
-
 // containers
 .main-container {
     height: 100%;
     width: 100%;
     @include flex(column);
+    @include bg-image();
     #edit-page-photo {
         @include bg-image();
         height: 150px;

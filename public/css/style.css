@@ -1,8 +1,8 @@
 .bg-primary {
-  background-color: #f2612c; }
+  background-color: #9d0208; }
 
 .bg-secondary {
-  background-color: #9b00f5; }
+  background-color: #0D1E82; }
 
 .bg-light {
   background-color: #f2f2f8; }
@@ -11,10 +11,10 @@
   background-color: #676567; }
 
 .text-primary {
-  color: #f2612c; }
+  color: #9d0208; }
 
 .text-secondary {
-  color: #9b00f5; }
+  color: #0D1E82; }
 
 .text-light {
   color: #f2f2f8; }
@@ -41,16 +41,12 @@ button {
   width: 100px;
   background-color: #f2f2f8;
   border-radius: 5px;
-  border: 3px solid #f2612c;
+  border: 3px solid #9d0208;
   color: #676567; }
   button:hover {
-    background-color: #f2612c;
+    background-color: #9d0208;
     color: #f2f2f8;
     transition: 0.5s; }
-
-.bg-pattern {
-  background-size: initial;
-  background-position: center; }
 
 html, body {
   margin: 0;
@@ -63,31 +59,16 @@ html, body {
 a {
   text-decoration: none; }
 
-#nav {
-  position: fixed;
-  top: 20px;
-  left: 0;
-  width: 100vw;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Dancing Script', cursive; }
-  #nav a {
-    color: #f2612c;
-    font-size: 48px; }
-    #nav a:hover {
-      transition: 0.2s;
-      color: #9b00f5;
-      text-decoration: underline; }
-
 .main-container {
   height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
   .main-container #edit-page-photo {
     background-size: cover;
     background-position: center;
@@ -133,11 +114,11 @@ a {
       background-position: center;
       background-repeat: no-repeat; }
     .page-content .profile-card a {
-      color: #f2612c;
+      color: #9d0208;
       font-size: 24px;
       margin-top: 10px; }
       .page-content .profile-card a:hover {
-        color: #9b00f5;
+        color: #0D1E82;
         transition: 0.5s; }
   .page-content .profile-page-container {
     width: 100%;
@@ -166,14 +147,14 @@ a {
         .page-content .profile-page-container .profile-section .links a {
           margin: 0 10px 0 10px;
           font-size: 24px;
-          color: #9b00f5; }
+          color: #0D1E82; }
           .page-content .profile-page-container .profile-section .links a:hover {
             transition: 0.5s;
-            color: #f2612c; }
+            color: #9d0208; }
     .page-content .profile-page-container .divider {
       height: 1px;
       width: 100%;
-      background-color: #9b00f5; }
+      background-color: #0D1E82; }
 
 #login-wrapper {
   height: 100%;
@@ -186,8 +167,8 @@ a {
     height: 350px;
     width: 350px;
     border-radius: 10px;
-    background-color: #9b00f5;
-    border: 1px solid #f2612c; }
+    background-color: #0D1E82;
+    border: 1px solid #9d0208; }
     #login-wrapper #login-form-wrapper form {
       display: flex;
       flex-direction: column;
@@ -201,7 +182,7 @@ a {
         height: 25px;
         width: 200px;
         border-radius: 5px;
-        border: 1px solid #f2612c; }
+        border: 1px solid #9d0208; }
 
 @media only screen and (min-width: 900px) {
   .page-content {
